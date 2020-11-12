@@ -38,6 +38,28 @@
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
     <!-- Your Code Here -->
+    <script id="apartment-template" type="text/x-handlebars-template">
+        
+           <div class="result">
+               <img src="{{img}}" alt="">
+               <span class="label l-addr">Address:</span>
+               <span class="address">{{address}}</span>
+               <span class="label l-price">Price</span>
+               <span class="price">{{price}}</span>
+               <span class="label l-rooms">Rooms:</span>
+               <span class="rooms">{{rooms}}</span>
+               {{#if parking}}
+                   <div class="parking">Parking Available</div>
+               {{/if}}
+               {{#if immediate}}
+               <div>
+                    <span>To contact:{{contactDetails.name}} {{contactDetails.email}}</span>
+                    <span></span>
+                </div>
+               {{/if}}
+
+           </div>
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>

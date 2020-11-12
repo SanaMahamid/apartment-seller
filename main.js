@@ -13,8 +13,18 @@ $("button").on("click", function () {
 
 const renderApts = function (apartments) {
     $("#results").empty()
-    console.log(apartments) //array of apartments to render
+    for(let i=0;i<apartments.length;i++){
+    //console.log(apartments) //array of apartments to render
     //Your code goes here.
+    var source = $('#apartment-template').html();
+    //console.log(source)
+    var template = Handlebars.compile(source); 
+    //console.log(template)
+    const newHtml = template(apartments[i])
+    //console.log(newHtml)
+    $('#results').append(newHtml)
+    //console.log(apartments)
+    }
 }
 
 renderApts(apartments) //renders apartments when page loads
